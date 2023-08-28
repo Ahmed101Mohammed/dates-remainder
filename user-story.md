@@ -58,7 +58,7 @@
 >   - task1
 >   - task2
 >   - etc.
-> "______________"
+> ______________
 > - You can Add new task with a date in this form: yyyy/mm/dd:task: (client data)
 
 - Client:
@@ -71,7 +71,7 @@
 >   - task1
 >   - task2
 >   - etc.
-> "______________"
+> ______________
 > - You can Add new task with a date in this form: yyyy/mm/dd:task.
 > - Add your new task: (user data)
 
@@ -86,7 +86,7 @@
 >   - task1
 >   - task2
 >   - etc.
-> "______________"
+> ______________
 > - You can Add new task:
 > - Add the date of you new task (yyyy/mm/dd): (user data)
 > - Add your new task: (user data)
@@ -112,7 +112,7 @@
 >   - task1
 >   - task2
 >   - etc.
-> "______________"
+> ______________
 > - You can Add new task:
 > - Add the date of you new task (yyyy/mm/dd): !WRONG DATA
 > - Plase add real date in right formate: yyyy/mm/dd like: 2023/8/28
@@ -136,7 +136,7 @@
 >   - task1
 >   - task2
 >   - etc.
-> "______________"
+> ______________
 > - You can Add new task (In any step print "no" to avoid adding the task):
 > - Add the date of you new task (yyyy/mm/dd): (user data)
 > - Add your new task: (user data)
@@ -160,7 +160,7 @@
 >   - task1
 >   - task2
 >   - etc.
-> "______________"
+> ______________
 > - To quite form app (Quite constructors)
 > - You can Add new task (In any step print "no" to avoid adding the task):
 > - Add the date of you new task (yyyy/mm/dd): (user data)
