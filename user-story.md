@@ -17,22 +17,22 @@
 
 - Developer:
 > Ok you want it like this;
-> Hi 'User' to day is : yyyy/mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi 'User' to day is : yyyy/mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 
 - Client:
 > Ok, it's great but without years.
 
 - Deveeloper:
 > Ok this is result:
-> Hi 'User' to day is : mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi 'User' to day is : mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 
 ## Part two of the conversation. (User Add new Task)
 - Developer:
@@ -53,27 +53,27 @@
 > Ok, how do you want the user to add his new tasks with dates?
 > We can add a line after presentation of day tasks, for a adding new tasks.
 > like this:
-> Hi to day is : mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi to day is : mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 > "______________"
-> You can Add new task with a date in this form: yyyy/mm/dd:task: (client data)
+> - You can Add new task with a date in this form: yyyy/mm/dd:task: (client data)
 
 - Client:
 > It's look too long, I want it shorter.
 
 - Developer:
 > What about this:
-> Hi to day is : mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi to day is : mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 > "______________"
-> You can Add new task with a date in this form: yyyy/mm/dd:task.
-> Add your new task: (user data)
+> - You can Add new task with a date in this form: yyyy/mm/dd:task.
+> - Add your new task: (user data)
 
 - Client:
 > Ok, it's good. but I think the form of data is complicated we can split it for more steps?
@@ -81,15 +81,15 @@
 
 - Developer:
 > sure we can. see this:
-> Hi to day is : mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi to day is : mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 > "______________"
-> You can Add new task:
-> Add the date of you new task (yyyy/mm/dd): (user data)
-> Add your new task: (user data)
+> - You can Add new task:
+> - Add the date of you new task (yyyy/mm/dd): (user data)
+> - Add your new task: (user data)
 
 - Client:
 > Ok, it's better.
@@ -107,17 +107,17 @@
 
 - Developer:
 > Ok look to this example:
-> Hi to day is : mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi to day is : mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 > "______________"
-> You can Add new task:
-> Add the date of you new task (yyyy/mm/dd): !WRONG DATA
-> Plase add real date in right formate: yyyy/mm/dd like: 2023/8/28
-> Add the date of you new task (yyyy/mm/dd): (user data)
-> Add your new task: (user data)
+> - You can Add new task:
+> - Add the date of you new task (yyyy/mm/dd): !WRONG DATA
+> - Plase add real date in right formate: yyyy/mm/dd like: 2023/8/28
+> - Add the date of you new task (yyyy/mm/dd): (user data)
+> - Add your new task: (user data)
 
 - Client:
 > Ok I think it's good.
@@ -131,20 +131,20 @@
 
 - Developer:
 > Ok I think we can let him to add specfic sentence in any step. like:
-> Hi to day is : mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi to day is : mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 > "______________"
-> You can Add new task (In any step print "no" to avoid adding the task):
-> Add the date of you new task (yyyy/mm/dd): (user data)
-> Add your new task: (user data)
+> - You can Add new task (In any step print "no" to avoid adding the task):
+> - Add the date of you new task (yyyy/mm/dd): (user data)
+> - Add your new task: (user data)
 
 - Client:
 > Ok I like it, it's sample.
 
-## Part four of the conversation.
+## Part four of the conversation. (User quiting)
 - Developer:
 > Ok we need to add a way to quit from the app. it will be with some thing like: Ctrl + Z keys or quit word.
 
@@ -155,16 +155,16 @@
 > Ok This is final result:
 > Ok I think we can let him to add specfic sentence in any step. like:
 > sure we can. see this:
-> Hi to day is : mm/dd
-> These is your tasks to day:
-> - task1
-> - task2
-> - etc.
+> - Hi to day is : mm/dd
+> - These is your tasks to day:
+>   - task1
+>   - task2
+>   - etc.
 > "______________"
-> To quite form app (Quite constructors)
-> You can Add new task (In any step print "no" to avoid adding the task):
-> Add the date of you new task (yyyy/mm/dd): (user data)
-> Add your new task: (user data)
+> - To quite form app (Quite constructors)
+> - You can Add new task (In any step print "no" to avoid adding the task):
+> - Add the date of you new task (yyyy/mm/dd): (user data)
+> - Add your new task: (user data)
 
 - Client:
 > Yeah, this what I want.
