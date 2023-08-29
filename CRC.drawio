@@ -82,7 +82,7 @@
                 <mxCell id="31" value="Sure the reality of date." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="30" vertex="1">
                     <mxGeometry y="30" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="Return massge for rong date&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="30" vertex="1">
+                <mxCell id="37" value="Has a state of the rightness of data." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="30" vertex="1">
                     <mxGeometry y="60" width="280" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="38" value="Create new object of task and date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="30" vertex="1">
