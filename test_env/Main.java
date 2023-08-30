@@ -12,6 +12,7 @@ public class Main {
         DB_Model.prepareAppDB();
         TaskWithDate newTask = new TaskWithDate("2023/9/1", "Play football");
         DB_Model.addNewTask(newTask);
+        System.out.println(DB_Model.getTasks("2023/9/1"));
     }
 
     public static void test_TaskWithDate_isDateInLegalForm()

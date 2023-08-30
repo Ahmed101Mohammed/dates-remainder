@@ -3,8 +3,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.ArrayList;
 public abstract class DB_Model {
     private static Connection connectref;
     private static String path = "jdbc:sqlite:tasks.db";
@@ -68,6 +69,48 @@ public abstract class DB_Model {
         {
             System.out.println(e.getMessage());
             System.out.println("Sorry Your task not saved check the problem above.");
+        }
+    }
+
+    public static ArrayList<TaskWithDate> getTasks(String date)
+    {
+        String query = "Select task From tasks Where date LIKE '"+ date +"';";
+        return getTasksFromDB(query, date);
+    }
+
+    private static ArrayList<TaskWithDate> getTasksFromDB(String query, String date)
+    {
+        try
+        {
+            Statement getStatement = connectref.createStatement();
+            ResultSet tasks = getStatement.executeQuery(query);
+            return convertResultSetToTaskWithDate(tasks, date);
+        }
+        catch (SQLException e)
+        {
+            System.out.println(e);
+            ArrayList<TaskWithDate> tasksList = new ArrayList<TaskWithDate>();
+            return tasksList; //empty if no results
+        }
+    }
+
+    private static ArrayList<TaskWithDate> convertResultSetToTaskWithDate(ResultSet tasks, String date)
+    {
+        ArrayList<TaskWithDate> tasksList = new ArrayList<TaskWithDate>();
+        try
+        {
+            while(tasks.next())
+            {
+                TaskWithDate task = new TaskWithDate(date, tasks.getString("task"));
+                tasksList.add(task);
+            }
+            System.out.println("Data is ready.");
+            return tasksList;
+        }
+        catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+            return tasksList;
         }
     }
 }
