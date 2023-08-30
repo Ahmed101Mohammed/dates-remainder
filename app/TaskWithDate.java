@@ -87,7 +87,7 @@ public class TaskWithDate {
         return false;
     }
 
-    private String[] yearMonthDay(String dateInValidForm)
+    protected static String[] yearMonthDay(String dateInValidForm)
     {
         int count_backSlach = 0;
         String[] year_month_day = {"","",""};
@@ -121,7 +121,7 @@ public class TaskWithDate {
         }
     }
 
-    private boolean eachStringHasChar(String[] list)
+    protected static boolean eachStringHasChar(String[] list)
         {
             for(String item:list)
             {
