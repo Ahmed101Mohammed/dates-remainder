@@ -2,6 +2,7 @@ package app;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public abstract class DB_Model {
@@ -24,7 +25,7 @@ public abstract class DB_Model {
 
     public static void prepareAppDB()
     {
-        String projectTable = "CREATE TABLE IF NOT EXISTS tesks (\n"
+        String projectTable = "CREATE TABLE IF NOT EXISTS tasks (\n"
                             +  "    date TEXT NOT NULL,\n"
                             +  "    task TEXT NOT NULL\n);";
         
@@ -37,6 +38,36 @@ public abstract class DB_Model {
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
+        }
+    }
+
+    public static void addNewTask(TaskWithDate task)
+    {
+        if(task.getDataAccessedRightState())
+        {
+            String insertNewTask = "INSERT INTO tasks(date,task) VALUES(?,?)";
+            addNewTaskToDB(insertNewTask, task);
+        }
+        else
+        {
+            System.out.println("Your accessed right state for your input is false.");
+        }
+    }
+
+    private static void addNewTaskToDB(String quary, TaskWithDate data)
+    {
+        try
+        {
+            PreparedStatement insertStatement = connectref.prepareStatement(quary);
+            insertStatement.setString(1, data.getDate());
+            insertStatement.setString(2, data.getTask());
+            insertStatement.executeUpdate();
+            System.out.println("Your task is saved.");
+        }
+        catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Sorry Your task not saved check the problem above.");
         }
     }
 }
