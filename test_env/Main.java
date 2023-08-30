@@ -1,11 +1,15 @@
 package test_env;
-import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+        // TaskWithDate tests:
         test_TaskWithDate_isDateInLegalForm();
         test_TaskWithDate_yearMonthDay();
         test_TaskWithDate_createObject();
+
+        // DB_Model tests:
+        DB_Model.connect();
+        DB_Model.prepareAppDB();
     }
 
     public static void test_TaskWithDate_isDateInLegalForm()
