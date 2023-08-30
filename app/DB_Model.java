@@ -113,4 +113,28 @@ public abstract class DB_Model {
             return tasksList;
         }
     }
+
+    private static int convertDateToNumber(String date)
+    {
+        String[] yearMonthDay = TaskWithDate.yearMonthDay(date);
+        modifyYearMonthDayFormate(yearMonthDay);
+        return Integer.parseInt(yearMonthDay[0]+yearMonthDay[1]+yearMonthDay[2]);
+    }
+
+    private static void modifyYearMonthDayFormate(String[] yearMonthDay)
+    {
+        for (int i = 1; i < yearMonthDay.length; i++)
+        {
+            yearMonthDay[i] = addZeroStringForOneLenghtString(yearMonthDay[i]);
+        }
+    }
+
+    private static String addZeroStringForOneLenghtString(String string)
+    {
+        if (string.length() == 1)
+        {
+            return "0" + string;
+        }
+        return string;
+    }
 }
