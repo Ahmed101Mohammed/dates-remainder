@@ -5,8 +5,8 @@ import java.time.LocalDate;
 
 public class TaskWithDate {
     private String date;
-    private String task;
-    public boolean data_accessed_right;
+    private String task = "";
+    private boolean dataAccessedRight;
     static HashSet<String> validString = new HashSet<String>(
             Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "/"));
     
@@ -16,13 +16,28 @@ public class TaskWithDate {
         {
             this.date = date;
             this.task = task;
-            this.data_accessed_right = true;
+            this.dataAccessedRight = true;
         }
         else
         {
-            this.data_accessed_right = false;
+            this.dataAccessedRight = false;
         }
         
+    }
+
+    public String getDate()
+    {
+        return this.date;
+    }
+
+    public String getTask()
+    {
+        return this.task;
+    }
+
+    public boolean getDataAccessedRightState()
+    {
+        return this.dataAccessedRight;
     }
 
     public boolean isRealFutureDate(String date)
