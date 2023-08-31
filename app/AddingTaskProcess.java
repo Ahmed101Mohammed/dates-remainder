@@ -3,20 +3,21 @@ import java.util.Scanner;
 public abstract class AddingTaskProcess {
     public static void start()
     {
-        System.out.println("To quite form app pres: (CTRL + Z) OR (CTRL + C) OR print 'quit' word.");
+        System.out.println("To quite form app press: (CTRL + Z) OR (CTRL + C) OR print 'quit' word.");
         System.out.println("You can Add new task (In any step print \"no\" to avoid adding the task):");
 
         while(true)
         {
             String date = getDateFromUser();
+            if(date.equals("no")){continue;}
             if (!TaskWithDate.isRealFutureDate(date))
             {
-                System.out.println("Plase add real date in right formate: yyyy/mm/dd .");
+                System.out.println("Plase add real future date in right formate: yyyy/mm/dd .");
                 continue;
             }
             
             String task = getTaskFromUser();
-
+            if(task.equals("no")){continue;}
             TaskWithDate newTask = new TaskWithDate(date, task);
             DB_Model.addNewTask(newTask);
         }
@@ -44,8 +45,7 @@ public abstract class AddingTaskProcess {
     {
         Scanner myScan = new Scanner(System.in);
         System.out.print(ask_sentence);
-        String data = myScan.next();
-        myScan.close();
+        String data = myScan.nextLine();
         exit(data.equals("quit"));
         return data;
     }

@@ -11,22 +11,24 @@ public abstract class DB_Model {
     private static Connection connectref;
     private static String path = "jdbc:sqlite:tasks.db";
     
-    public static void connect()
+    private static boolean connect()
     {
         try
         {
             connectref = null;
             connectref = DriverManager.getConnection(path);
-            System.out.println("Connected to DB is done.");
+            return true;
         }
         catch(SQLException e)
         {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            return false;
         }
     }
 
-    public static void prepareAppDB()
+    public static boolean prepareAppDB()
     {
+        connect();
         String projectTable = "CREATE TABLE IF NOT EXISTS tasks (\n"
                             +  "    date TEXT NOT NULL,\n"
                             +  "    task TEXT NOT NULL,\n"
@@ -36,11 +38,12 @@ public abstract class DB_Model {
         {
             Statement createTebleStatement = connectref.createStatement();
             createTebleStatement.execute(projectTable);
-            System.out.println("Project table is created.");
+            return true;
         }
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
+            return false;
         }
     }
 
@@ -48,7 +51,7 @@ public abstract class DB_Model {
     {
         if(task.getDataAccessedRightState())
         {
-            String insertNewTask = "INSERT INTO tasks(date,task,date__value) VALUES(?,?,?)";
+            String insertNewTask = "INSERT INTO tasks(date,task,date_value) VALUES(?,?,?)";
             addNewTaskToDB(insertNewTask, task);
         }
         else
@@ -57,7 +60,7 @@ public abstract class DB_Model {
         }
     }
 
-    private static void addNewTaskToDB(String quary, TaskWithDate data)
+    private static boolean addNewTaskToDB(String quary, TaskWithDate data)
     {
         try
         {
@@ -66,12 +69,14 @@ public abstract class DB_Model {
             insertStatement.setString(2, data.getTask());
             insertStatement.setInt(3, convertDateToNumber(data.getDate()));
             insertStatement.executeUpdate();
-            System.out.println("Your task is saved.");
+            System.out.println("Your new task is saved!");
+            return true;
         }
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
             System.out.println("Sorry Your task not saved check the problem above.");
+            return false;
         }
     }
 
@@ -107,7 +112,6 @@ public abstract class DB_Model {
                 TaskWithDate task = new TaskWithDate(date, tasks.getString("task"));
                 tasksList.add(task);
             }
-            System.out.println("Data is ready.");
             return tasksList;
         }
         catch (SQLException e)
@@ -151,18 +155,19 @@ public abstract class DB_Model {
         removeAllpreviouseTasksFromDB(deleteQuery);
     }
 
-    private static void removeAllpreviouseTasksFromDB(String quary)
+    private static boolean removeAllpreviouseTasksFromDB(String quary)
     {
         try
         {
             Statement deleteStatment = connectref.createStatement();
             deleteStatment.execute(quary);
-            System.out.println("Data is refreshed");
+            return true;
         }
         catch(SQLException e)
         {
             System.out.println(e);
             System.out.println("DB didn't refreshed plase check the problem above.");
+            return false;
         }
     }
 }
