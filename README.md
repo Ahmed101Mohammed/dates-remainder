@@ -3,54 +3,54 @@ This is a personal application, you can use it. It is a simple app to record tas
 
 ## Project description:
 ### App features.
-- When you open the app, it will give you a list of your tasks to day, that your record in the past.
-- The app give you the aplity to record any task for the future only. and you can't remove or edit the tasks added.
+- When you open the app, it will give you a list of your tasks today, that you record in the past.
+- The app gives you the ability to record any task for the future only. and you can't remove or edit the tasks added.
 ### App technologies:
-App is bulied with two main technologies and two technecs of software architect:
+The app is bullied with two main technologies and two techniques of software architecture:
 - App technologies are:
-    1. Java PL: I use it for improve my skills in it.
-    2. Sqlite DB: I use it because the app is so sample and I doesn't have any future intends.
-    3. JDBC driver: I use this driver as a reference to my app to help my java code comunicate with sqlite.
-- App Software architecture technecs used:
-    1. user-story technec: I use it to understand the application dimentios.
-    2. CRC (Class-Responsipilities-Collaborators): I use it to descripe my application after I finished from user-stroy technec.
+    1. Java PL: I use it to improve my skills in it.
+    2. Sqlite DB: I use it because the app is so simple and I don't have any future intends.
+    3. JDBC driver: I use this driver as a reference to my app to help my Java code communicate with SQLite.
+- App Software architecture techniques used:
+    1. User-story technique: I use it to understand the application dimensions.
+    2. CRC (Class-Responsipilities-Collaborators): I use it to describe my application after I finish from user-stroy technique.
 ### Main Challenge I face in this project:
-I build this app to use the user-story and CRC technecs after I learned them. And I'm not find challenge problem wiht them.
-My challenging problem is to make a communication between java and sqlite db (It take 2 hours to do that).
+I built this app to use the user-story and CRC techniques after I learned them. And I do not find a challenging problem with them.
+My challenging problem is to make a communication between java and SQLite db (It takes 2 hours to do that).
 
-## Installing and Runing:
+## Installing and Running:
 ### Install the project:
-To install the project you can open your terminall and put this command:
+To install the project you can open your terminal and enter this command:
 ```
 git clone https://github.com/Ahmed101Mohammed/dates-remainder.git
 ```
 ### Run the project:
-If you expert than me I expect that you can run this project in way easy than what I do. Put What I will explain is take some time becouse I can use the project only in VS code terminal.
-folow these steps:
+If you expert than me I expect that you can run this project in way easy than I am. What I will explain is takes some time because I can use the project only in the VS code terminal.
+follow these steps:
 #### First Step:
-If has not extensions to run java code install these extensions from vs code extensions:
-- Extension Pack for Java (This extension contain all the extensions you need).
+If you don't have extensions to run Java code install these extensions from vs code extensions:
+- Extension Pack for Java (This extension contains all the extensions you need).
 #### Second Step:
-Install the jar file of [this web site](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc/3.42.0.1)
-#### Therd Step:
-Open the project folder with vs code by type:
+Install the jar file of [this website](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc/3.42.0.1)
+#### Third Step:
+Open the project folder with vs code by typing:
 ```
 code .
 ```
-In termenal when be in the diractory of the project "dates-remainder".
+In the terminal when being in the directory of the project "dates-remainder".
 #### Fourth Step:
-- In VS code environment in the EXPLORER tap, you will find in the buttom this tap: "> JAVA PROJECTS".
-- Click on the tap and you will see new tap called: "> [] dates-reminder".
-- Click on it and many taps will appear, make the mouse over on this tap: "> [] Referenced Libraries"
-- Then plus + sign will appreare. press it and finde teh fiel that you install in the ***Therd Step***.
+- In VS code environment in the EXPLORER tap, you will find in the bottom this tap: "> JAVA PROJECTS".
+- Click on the tap and you will see a new tap called: "> [] dates-reminder".
+- Click on it and many taps will appear, Make the mouse over on this tap: "> [] Referenced Libraries"
+- Then the plus + sign will appear. Press it and find the field that you installed in the ***Therd Step***.
 
-#### Fifth Step (finaly):
-In VS Code enviroment go to **app** folder and open **Main.java** file.
+#### Fifth Step (finally):
+In the VS Code environment go to the **app** folder and open **Main.java** file.
 about the **main** method, you will find ***Run*** word, Press it.
-The project will run in terminall and you will can use it.
+The project will run in a terminal and you can use it.
 
 ## How to use the application:
-The app is so easy to understand. It has the constractrors if you flow them you will use full of it power.
+The app is so easy to understand. It has the contractors if you flow them you will use full of its power.
 
 ## MIT License
 
@@ -76,6 +76,6 @@ SOFTWARE.
 
 ## How you can Contribute
 I expect that you know how to fork and pull in GitHub.
-All what you can do is: pull your contribute with none strange fiels. And deep explanation about the bug that you solve or the feature that you add.
-I wish you find a better way to run the app. and upgrade the ReadMe file with it. But this way should work with me to accept it.
+All you can do is: pull your contribution with none strange files. And deep explanation about the bug that you solved or the feature that you added.
+I hope you find a better way to run the app and upgrade the ReadMe file with it. But this way should work with me to accept it.
 Thanks. 
