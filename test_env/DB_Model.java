@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.time.LocalDate;
+
 public abstract class DB_Model {
     private static Connection connectref;
     private static String path = "jdbc:sqlite:tasks.db";
@@ -47,7 +49,7 @@ public abstract class DB_Model {
     {
         if(task.getDataAccessedRightState())
         {
-            String insertNewTask = "INSERT INTO tasks(date,task,date_value) VALUES(?,?,?)";
+            String insertNewTask = "INSERT INTO tasks(date,task,date__value) VALUES(?,?,?)";
             addNewTaskToDB(insertNewTask, task);
         }
         else
@@ -138,5 +140,32 @@ public abstract class DB_Model {
             return "0" + string;
         }
         return string;
+    }
+
+
+    public static void removeAllpreviouseTasks()
+    {
+        LocalDate toDay = LocalDate.now();
+        String toDayString = Integer.toString(toDay.getYear()) + "/" + Integer.toString(toDay.getMonthValue()) + "/" + Integer.toString(toDay.getDayOfMonth());
+
+        int toDayValue = convertDateToNumber(toDayString);
+
+        String deleteQuery = "DELETE FROM tasks WHERE date_value < " + toDayValue + " ;";
+        removeAllpreviouseTasksFromDB(deleteQuery);
+    }
+
+    private static void removeAllpreviouseTasksFromDB(String quary)
+    {
+        try
+        {
+            Statement deleteStatment = connectref.createStatement();
+            deleteStatment.execute(quary);
+            System.out.println("Data is refreshed");
+        }
+        catch(SQLException e)
+        {
+            System.out.println(e);
+            System.out.println("DB didn't refreshed plase check the problem above.");
+        }
     }
 }
