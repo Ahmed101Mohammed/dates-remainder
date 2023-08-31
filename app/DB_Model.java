@@ -28,7 +28,8 @@ public abstract class DB_Model {
     {
         String projectTable = "CREATE TABLE IF NOT EXISTS tasks (\n"
                             +  "    date TEXT NOT NULL,\n"
-                            +  "    task TEXT NOT NULL\n);";
+                            +  "    task TEXT NOT NULL,\n"
+                            +   "   date_value INTEGER NOT NULL);";
         
         try
         {
@@ -46,7 +47,7 @@ public abstract class DB_Model {
     {
         if(task.getDataAccessedRightState())
         {
-            String insertNewTask = "INSERT INTO tasks(date,task) VALUES(?,?)";
+            String insertNewTask = "INSERT INTO tasks(date,task,date__value) VALUES(?,?,?)";
             addNewTaskToDB(insertNewTask, task);
         }
         else
@@ -62,6 +63,7 @@ public abstract class DB_Model {
             PreparedStatement insertStatement = connectref.prepareStatement(quary);
             insertStatement.setString(1, data.getDate());
             insertStatement.setString(2, data.getTask());
+            insertStatement.setInt(3, convertDateToNumber(data.getDate()));
             insertStatement.executeUpdate();
             System.out.println("Your task is saved.");
         }

@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public class TaskWithDate {
     public String date;
-    public String task;
+    public String task = "";
     public boolean dataAccessedRight;
     static HashSet<String> validString = new HashSet<String>(
             Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "/"));
@@ -87,7 +87,7 @@ public class TaskWithDate {
         return false;
     }
 
-    public String[] yearMonthDay(String dateInValidForm)
+    protected static String[] yearMonthDay(String dateInValidForm)
     {
         int count_backSlach = 0;
         String[] year_month_day = {"","",""};
@@ -121,7 +121,7 @@ public class TaskWithDate {
         }
     }
 
-    public boolean eachStringHasChar(String[] list)
+    protected static boolean eachStringHasChar(String[] list)
         {
             for(String item:list)
             {
