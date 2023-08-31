@@ -22,7 +22,7 @@ public abstract class AddingTaskProcess {
         }
     }
 
-    private static void exis(boolean condition)
+    private static void exit(boolean condition)
     {
         if (condition)
         {
@@ -46,7 +46,7 @@ public abstract class AddingTaskProcess {
         System.out.print(ask_sentence);
         String data = myScan.next();
         myScan.close();
-        exis(data.equals("quit"));
+        exit(data.equals("quit"));
         return data;
     }
 }
