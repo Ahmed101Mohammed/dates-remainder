@@ -40,7 +40,7 @@ public class TaskWithDate {
         return this.dataAccessedRight;
     }
 
-    public boolean isRealFutureDate(String date)
+    public static boolean isRealFutureDate(String date)
     {
         if(isDateInLegalForm(date))
         {
@@ -63,7 +63,7 @@ public class TaskWithDate {
         return false;
     }
 
-    private boolean isDateInLegalForm(String date)
+    private static boolean isDateInLegalForm(String date)
     {
         int count_backSlach = 0;
         for (String ch:date.split(""))
@@ -133,7 +133,7 @@ public class TaskWithDate {
             return true;
         }
 
-    private boolean arrMonthsAndDaysInRange(String[] YearMonthDay)
+    private static boolean arrMonthsAndDaysInRange(String[] YearMonthDay)
     {
         int year = Integer.parseInt(YearMonthDay[0]);
         int month = Integer.parseInt(YearMonthDay[1]);
@@ -153,7 +153,7 @@ public class TaskWithDate {
         return false;
     }
 
-    private boolean isLeapYear(int year) {
+    private static boolean isLeapYear(int year) {
         if (year % 4 != 0) {
             return false;
         } else if (year % 100 != 0) {
@@ -165,7 +165,7 @@ public class TaskWithDate {
         }
     }
     
-    private boolean isD1GreaterthanD2(int[] date1, int[] date2)
+    private static boolean isD1GreaterthanD2(int[] date1, int[] date2)
     {
         int year1 = date1[0];
         int year2 = date2[0];
