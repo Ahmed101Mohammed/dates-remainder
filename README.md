@@ -48,3 +48,6 @@ In termenal when be in the diractory of the project "dates-remainder".
 In VS Code enviroment go to **app** folder and open **Main.java** file.
 about the **main** method, you will find ***Run*** word, Press it.
 The project will run in terminall and you will can use it.
+
+## How to use the application:
+The app is so easy to understand. It has the constractrors if you flow them you will use full of it power.
