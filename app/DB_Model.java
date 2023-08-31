@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.time.LocalDate;
 
 public abstract class DB_Model {
     private static Connection connectref;
@@ -145,9 +144,7 @@ public abstract class DB_Model {
 
     public static void removeAllpreviouseTasks()
     {
-        LocalDate toDay = LocalDate.now();
-        String toDayString = Integer.toString(toDay.getYear()) + "/" + Integer.toString(toDay.getMonthValue()) + "/" + Integer.toString(toDay.getDayOfMonth());
-
+        String toDayString = DayTasksPresentation.convetToDayToString();
         int toDayValue = convertDateToNumber(toDayString);
 
         String deleteQuery = "DELETE FROM tasks WHERE date_value < " + toDayValue + " ;";
