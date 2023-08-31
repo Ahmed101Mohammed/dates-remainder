@@ -73,3 +73,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## How you can Contribute
+I expect that you know how to fork and pull in GitHub.
+All what you can do is: pull your contribute with none strange fiels. And deep explanation about the bug that you solve or the feature that you add.
+I wish you find a better way to run the app. and upgrade the ReadMe file with it. But this way should work with me to accept it.
+Thanks. 
