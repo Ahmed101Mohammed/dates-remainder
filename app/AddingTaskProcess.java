@@ -33,7 +33,7 @@ public abstract class AddingTaskProcess {
 
     private static String getDateFromUser()
     {
-        return getStringDataFromScanner("Add the date of you new task (yyyy/mm/dd): ");
+        return getStringDataFromScanner("Add the date of your new task (yyyy/mm/dd): ");
     }
 
     private static String getTaskFromUser()
