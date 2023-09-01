@@ -5,6 +5,7 @@ This is a personal application, you can use it. It is a simple app to record tas
 ### App features.
 - When you open the app, it will give you a list of your tasks today, that you record in the past.
 - The app gives you the ability to record any task for the future only. and you can't remove or edit the tasks added.
+- The app give you the ability to see all previous recourds, but you should know that the app removes the taks that they being in the past.
 ### App technologies:
 The app is bullied with two main technologies and two techniques of software architecture:
 - App technologies are:
