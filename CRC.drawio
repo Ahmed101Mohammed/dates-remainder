@@ -1,14 +1,14 @@
 <mxfile host="65bd71144e">
     <diagram id="qQj_s9amm8tsBVUw8l7H" name="Page-1">
-        <mxGraphModel dx="1296" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1296" dy="112" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="AddingTaskProcess" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="140" y="80" width="600" height="220" as="geometry"/>
+                    <mxGeometry x="140" y="80" width="600" height="260" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="Responsiplities" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="2" vertex="1">
-                    <mxGeometry x="20" y="60" width="280" height="140" as="geometry"/>
+                    <mxGeometry x="20" y="40" width="280" height="190" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="Adding new task" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="3" vertex="1">
                     <mxGeometry y="30" width="280" height="30" as="geometry"/>
@@ -19,8 +19,11 @@
                 <mxCell id="6" value="Give a massege for successful or field add operation." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="3" vertex="1">
                     <mxGeometry y="90" width="280" height="50" as="geometry"/>
                 </mxCell>
+                <mxCell id="57" value="Give the use feature to see all of his dates." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" vertex="1" parent="3">
+                    <mxGeometry y="140" width="280" height="50" as="geometry"/>
+                </mxCell>
                 <mxCell id="7" value="Collaborators" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="2" vertex="1">
-                    <mxGeometry x="310" y="65" width="280" height="90" as="geometry"/>
+                    <mxGeometry x="310" y="40" width="280" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="DB_Model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="7" vertex="1">
                     <mxGeometry y="30" width="280" height="30" as="geometry"/>
@@ -50,7 +53,7 @@
                     <mxGeometry x="850" y="80" width="600" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="Responsiplities" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="19" vertex="1">
-                    <mxGeometry x="20" y="60" width="280" height="120" as="geometry"/>
+                    <mxGeometry x="20" y="60" width="280" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="Add new task to db" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="20" vertex="1">
                     <mxGeometry y="30" width="280" height="30" as="geometry"/>
@@ -60,6 +63,9 @@
                 </mxCell>
                 <mxCell id="26" value="remove the previouse dates tasks from db" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="20" vertex="1">
                     <mxGeometry y="90" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="get all tesks with dates." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" vertex="1" parent="20">
+                    <mxGeometry y="120" width="280" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="Collaborators" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="19" vertex="1">
                     <mxGeometry x="310" y="65" width="280" height="120" as="geometry"/>
@@ -99,7 +105,7 @@
                 <mxCell id="46" value="&lt;span style=&quot;font-size: 12px; font-weight: 700; text-align: center;&quot;&gt;DayTasksPresentation&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="44" vertex="1">
                     <mxGeometry y="60" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="&lt;span style=&quot;font-size: 12px; font-weight: 700; text-align: center;&quot;&gt;DB_Model&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" vertex="1" parent="44">
+                <mxCell id="56" value="&lt;span style=&quot;font-size: 12px; font-weight: 700; text-align: center;&quot;&gt;DB_Model&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000033;fontSize=13;" parent="44" vertex="1">
                     <mxGeometry y="90" width="280" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="47" value="Main" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">

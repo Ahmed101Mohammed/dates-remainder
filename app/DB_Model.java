@@ -82,7 +82,7 @@ public abstract class DB_Model {
 
     public static ArrayList<TaskWithDate> getTasks(String date)
     {
-        String query = "Select task From tasks Where date LIKE '"+ date +"';";
+        String query = "Select date, task From tasks Where date LIKE '"+ date +"';";
         return getTasksFromDB(query, date);
     }
 
@@ -92,7 +92,7 @@ public abstract class DB_Model {
         {
             Statement getStatement = connectref.createStatement();
             ResultSet tasks = getStatement.executeQuery(query);
-            return convertResultSetToTaskWithDate(tasks, date);
+            return convertResultSetToTaskWithDate(tasks);
         }
         catch (SQLException e)
         {
@@ -102,14 +102,14 @@ public abstract class DB_Model {
         }
     }
 
-    private static ArrayList<TaskWithDate> convertResultSetToTaskWithDate(ResultSet tasks, String date)
+    private static ArrayList<TaskWithDate> convertResultSetToTaskWithDate(ResultSet tasks)
     {
         ArrayList<TaskWithDate> tasksList = new ArrayList<TaskWithDate>();
         try
         {
             while(tasks.next())
             {
-                TaskWithDate task = new TaskWithDate(date, tasks.getString("task"));
+                TaskWithDate task = new TaskWithDate(tasks.getString("date"), tasks.getString("task"));
                 tasksList.add(task);
             }
             return tasksList;
@@ -123,9 +123,22 @@ public abstract class DB_Model {
 
     private static int convertDateToNumber(String date)
     {
+        String dateInStringStandard = convertDateToStandardFormate(date);
+        return Integer.parseInt(dateInStringStandard);
+    }
+
+    public static String convertDateToStandardFormate(String date)
+    {
         String[] yearMonthDay = TaskWithDate.yearMonthDay(date);
         modifyYearMonthDayFormate(yearMonthDay);
-        return Integer.parseInt(yearMonthDay[0]+yearMonthDay[1]+yearMonthDay[2]);
+        return yearMonthDay[0]+yearMonthDay[1]+yearMonthDay[2];
+    }
+
+    public static String convertDateToStandardFormateWithSlachs(String date)
+    {
+        String[] yearMonthDay = TaskWithDate.yearMonthDay(date);
+        modifyYearMonthDayFormate(yearMonthDay);
+        return yearMonthDay[0]+"/"+yearMonthDay[1]+"/"+yearMonthDay[2];
     }
 
     private static void modifyYearMonthDayFormate(String[] yearMonthDay)
@@ -168,6 +181,24 @@ public abstract class DB_Model {
             System.out.println(e);
             System.out.println("DB didn't refreshed plase check the problem above.");
             return false;
+        }
+    }
+
+    public static ArrayList<TaskWithDate> getAllTasksFromDB()
+    {
+        String getAllStatement = "SELECT date, task FROM tasks;";
+        try
+        {
+            Statement getAll = connectref.createStatement();
+            ResultSet allTasks = getAll.executeQuery(getAllStatement);
+            return convertResultSetToTaskWithDate(allTasks);
+
+        }
+        catch(SQLException e)
+        {
+            System.out.println(e);
+            ArrayList<TaskWithDate> empty = new ArrayList<TaskWithDate>();
+            return empty;
         }
     }
 }
