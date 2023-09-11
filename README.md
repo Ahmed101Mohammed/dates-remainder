@@ -5,7 +5,7 @@ This is a personal application, you can use it. It is a simple app to record tas
 ### App features.
 - When you open the app, it will give you a list of your tasks today, that you record in the past.
 - The app gives you the ability to record any task for the future only. and you can't remove or edit the tasks added.
-- The app give you the ability to see all previous recourds, but you should know that the app removes the taks that they being in the past.
+- The app gives you the ability to see all previous records, but you should know that the app removes the tasks that they were in the past.
 ### App technologies:
 The app is bullied with two main technologies and two techniques of software architecture:
 - App technologies are:
@@ -17,7 +17,7 @@ The app is bullied with two main technologies and two techniques of software arc
     2. CRC (Class-Responsipilities-Collaborators): I use it to describe my application after I finish from user-stroy technique.
 ### Main Challenge I face in this project:
 I built this app to use the user-story and CRC techniques after I learned them. And I do not find a challenging problem with them.
-My challenging problem is to make a communication between java and SQLite db (It takes 2 hours to do that).
+My challenging problem is to make a communication between Java and SQLite db (It takes 2 hours to do that).
 
 ## Installing and Running:
 ### Install the project:
@@ -40,7 +40,7 @@ code .
 ```
 In the terminal when being in the directory of the project "dates-remainder".
 #### Fourth Step:
-- In VS code environment in the EXPLORER tap, you will find in the bottom this tap: "> JAVA PROJECTS".
+- In VS code environment in the EXPLORER tap, you will find at the bottom this tap: "> JAVA PROJECTS".
 - Click on the tap and you will see a new tap called: "> [] dates-reminder".
 - Click on it and many taps will appear, Make the mouse over on this tap: "> [] Referenced Libraries"
 - Then the plus + sign will appear. Press it and find the field that you installed in the ***Therd Step***.
@@ -77,6 +77,6 @@ SOFTWARE.
 
 ## How you can Contribute
 I expect that you know how to fork and pull in GitHub.
-All you can do is: pull your contribution with none strange files. And deep explanation about the bug that you solved or the feature that you added.
+All you can do is: pull your contribution with none strange files. And a deep explanation about the bug that you solved or the feature that you added.
 I hope you find a better way to run the app and upgrade the ReadMe file with it. But this way should work with me to accept it.
 Thanks. 
